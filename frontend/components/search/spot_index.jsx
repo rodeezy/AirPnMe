@@ -3,7 +3,7 @@ import SpotIndexItem from './spot_index_item';
 
 const SpotIndex = ({ spots }) => (
   <div>
-    <h1>Spotes: </h1>
+    <h1>Spots: </h1>
     {spots.map(spot => (
       <SpotIndexItem spot={spot} key={spot.id} />
     ))}

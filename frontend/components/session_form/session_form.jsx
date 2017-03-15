@@ -1,10 +1,11 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router';
+import { merge } from 'lodash';
 
 class SessionForm extends React.Component {
 	constructor(props) {
 		super(props);
-		this.state = { email: "", password: "" };
+		this.state = { fname: "", lname: "", email: "", password: "" };
 		this.handleSubmit = this.handleSubmit.bind(this);
 	}
 
@@ -51,6 +52,7 @@ class SessionForm extends React.Component {
 	}
 
 	render() {
+		const inputType = this.props.formType === "login" ? "hidden" : "text";
 		return (
 			<div className="login-form-container">
 				<form onSubmit={this.handleSubmit} className="login-form-box">
@@ -59,6 +61,20 @@ class SessionForm extends React.Component {
 					Please {this.props.formType} or {this.navLink()}
 					{this.renderErrors()}
 					<div className="login-form">
+						<br/>
+						<label>{this.props.formType === "login" ? "" : "First Name:"}
+							<input type={inputType}
+								value={this.state.fname}
+								onChange={this.update("fname")}
+								className="login-input" />
+						</label>
+						<br/>
+						<label>{this.props.formType === "login" ? "" : "Last Name:"}
+							<input type={inputType}
+								value={this.state.lname}
+								onChange={this.update("lname")}
+								className="login-input" />
+						</label>
 						<br/>
 						<label> Email:
 							<input type="text"

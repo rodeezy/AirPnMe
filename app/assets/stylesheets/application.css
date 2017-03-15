@@ -13,3 +13,15 @@
  *= require_tree .
  *= require_self
  */
+
+ /*.testStyles {
+   float: right;
+ }*/
+
+ navBar {
+   float: right;
+ }
+
+ .navBar {
+   margin-left: 10px;
+ }

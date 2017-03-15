@@ -1,12 +1,23 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router';
 import { merge } from 'lodash';
+import Modal from 'react-modal';
+import ModalStyle from './modal_style';
 
 class SessionForm extends React.Component {
 	constructor(props) {
 		super(props);
-		this.state = { fname: "", lname: "", email: "", password: "" };
-		this.handleSubmit = this.handleSubmit.bind(this);
+		this.state = {
+			fname: "",
+			lname: "",
+			email: "",
+			password: "",
+			modalOpen: false,
+			modalType: 'Log in'
+		};
+ 		this.handleSubmit = this.handleSubmit.bind(this);
+		this.openModal = this.openModal.bind(this);
+		this.closeModal = this.closeModal.bind(this);
 	}
 
 	componentDidUpdate() {
@@ -28,20 +39,35 @@ class SessionForm extends React.Component {
 	handleSubmit(e) {
 		e.preventDefault();
 		const user = this.state;
-		this.props.processForm({user});
+		if (this.state.modalType === 'Log in') {
+			this.props.login({user});
+		} else {
+			this.props.signup({user});
+		}
 	}
 
 	navLink() {
-		if (this.props.formType === "login") {
-			return <Link to="/signup">sign up instead</Link>;
+		if (this.state.modalType === "Log in") {
+			return <button onClick={this.openModal.bind(this, 'Sign Up')}>Sign up</button>;
 		} else {
-			return <Link to="/login">log in instead</Link>;
+			return <button onClick={this.openModal.bind(this, 'Log in')}>Log in</button>;
 		}
+	}
+
+	openModal(modalType) {
+		this.setState({
+			modalOpen: true,
+			modalType
+		});
+	}
+
+	closeModal() {
+		this.setState({modalOpen: false});
 	}
 
 	renderErrors() {
 		return(
-			<ul>
+			<ul className="errors-list">
 				{this.props.errors.map((error, i) => (
 					<li key={`error-${i}`}>
 						{error}
@@ -52,47 +78,68 @@ class SessionForm extends React.Component {
 	}
 
 	render() {
-		const inputType = this.props.formType === "login" ? "hidden" : "text";
+		// const session = this;
+		// const login = this.props.login;
+		const inputType = this.state.modalType === "Log in" ? "hidden" : "text";
 		return (
-			<div className="login-form-container">
-				<form onSubmit={this.handleSubmit} className="login-form-box">
+			<div className="form-div">
+				<nav className="login-signup">
+					<Link onClick={this.openModal.bind(this, 'Sign Up')} className="login-signup-btn">Sign Up</Link>
+					&nbsp;&nbsp;
+					<Link onClick={this.openModal.bind(this, 'Log in')} className="login-signup-btn">Log In</Link>
+				</nav>
+				<Modal
+					contentLabel="Modal"
+					isOpen={this.state.modalOpen}
+					onRequestClose={this.closeModal}
+					style={ModalStyle}>
 					Welcome to AirPnMe!
 					<br/>
-					Please {this.props.formType} or {this.navLink()}
-					{this.renderErrors()}
-					<div className="login-form">
+						Please {this.state.modalType} or {this.navLink()} instead
 						<br/>
-						<label>{this.props.formType === "login" ? "" : "First Name:"}
-							<input type={inputType}
-								value={this.state.fname}
-								onChange={this.update("fname")}
-								className="login-input" />
-						</label>
-						<br/>
-						<label>{this.props.formType === "login" ? "" : "Last Name:"}
-							<input type={inputType}
-								value={this.state.lname}
-								onChange={this.update("lname")}
-								className="login-input" />
-						</label>
-						<br/>
-						<label> Email:
-							<input type="text"
-								value={this.state.email}
-								onChange={this.update("email")}
-								className="login-input" />
-						</label>
-						<br/>
-						<label> Password:
-							<input type="password"
-								value={this.state.password}
-								onChange={this.update("password")}
-								className="login-input" />
-						</label>
-						<br/>
-						<input type="submit" value="Submit" />
-					</div>
-				</form>
+						<button onClick={()=>this.props.login({user: { email: 'guest@guest.com', password: 'password' }})}>
+							Guest Login
+						</button>
+						<form onSubmit={this.handleSubmit} >
+							{this.renderErrors()}
+							<div className="login-form">
+								<br/>
+
+									<input type={inputType}
+										placeholder="First name"
+										value={this.state.fname}
+										onChange={this.update("fname")}
+										className="login-input" />
+
+								<br/>
+
+									<input type={inputType}
+										placeholder="Last name"
+										value={this.state.lname}
+										onChange={this.update("lname")}
+										className="login-input" />
+
+								<br/>
+
+									<input type="email"
+										placeholder="Email address"
+										value={this.state.email}
+										onChange={this.update("email")}
+										className="login-input" />
+
+								<br/>
+
+									<input type="password"
+										placeholder="Create a Password"
+										value={this.state.password}
+										onChange={this.update("password")}
+										className="login-input" />
+
+								<br/>
+								<input className="submit-login" type="submit" value={this.state.modalType} />
+							</div>
+						</form>
+					</Modal>
 			</div>
 		);
 	}
@@ -100,3 +147,14 @@ class SessionForm extends React.Component {
 }
 
 export default withRouter(SessionForm);
+
+/*
+<label>{this.state.modalType === "login" ? "":"First Name:"}
+</label>
+<label>{this.state.modalType === "login" ? "":"Last Name:"}
+</label>
+<label>Email:
+</label>
+<label>Password:
+</label>
+*/

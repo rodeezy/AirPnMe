@@ -17,7 +17,7 @@ const Root = ({ store }) => {
   const _ensureLoggedIn = (nextState, replace) => {
     const currentUser = store.getState().session.currentUser;
     if (!currentUser) {
-      replace('/login');
+      replace('/');
     }
   };
 
@@ -34,8 +34,8 @@ const Root = ({ store }) => {
       <Router history={hashHistory}>
         <Route path="/" component={App}>
           {/*<IndexRoute component={SearchContainer} />*/}
-          <Route path="/login" component={SessionFormContainer} onEnter={_redirectIfLoggedIn} />
-          <Route path="/signup" component={SessionFormContainer} onEnter={_redirectIfLoggedIn} />
+          {/*<Route path="/login" component={SessionFormContainer} onEnter={_redirectIfLoggedIn} />
+            <Route path="/signup" component={SessionFormContainer} onEnter={_redirectIfLoggedIn} />*/}
           {/*<Route path="/spots/new" component={SpotFormContainer} onEnter={_ensureLoggedIn} />
           <Route path="/spots/:spotId" component={SpotShowContainer}>
             <Route path="review" component={ReviewFormContainer} onEnter={_ensureLoggedIn} />

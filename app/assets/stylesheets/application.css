@@ -22,6 +22,7 @@
 .Header {
   color: #ff5a5f;
   width: 550px;
+  margin-top: 70px;
 }
 
 .inner-header {
@@ -31,6 +32,9 @@
 
 .logo {
   border-radius: 25px;
+  margin-top: 8px;
+  margin-left: 10px;
+  position: fixed;
 }
 
 Link {
@@ -50,12 +54,21 @@ a {
  button {
    cursor: pointer;
    text-decoration: none;
+   border: 1px solid;
+ }
+
+ #top {
+   display: flex;
+   align-items: center;
+   width: 100%;
+   background: white;
  }
 
 .login-signup {
   position: fixed;
   top: 20px;
   right: 0;
+  background-color: white;
 }
 
 .login-signup-btn {
@@ -111,6 +124,7 @@ a {
 
 .login-input::selection {
   border-color: blue;
+  background: #a8d1ff;
 }
 
 .login-input[type=email] {
@@ -154,19 +168,9 @@ a {
   width: 60px;
 }
 
- /*navBar {
-   float: right;
- }*/
+/*### MAP ###*/
 
- /*.navBar {
-   margin-left: 10px;
-   text-decoration: none;
-   font-size: 12px;
-   color: grey;
-   font-family: sans-serif;
-
- }*/
-/*
- .navBar:hover{
-   text-decoration: underline;
- }*/
+.map {
+  height: 400px;
+  width: 400px;
+}

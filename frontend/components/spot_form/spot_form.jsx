@@ -10,6 +10,9 @@ class SpotForm extends React.Component{
       image_url: "",
       price: 2
     };
+    this.owner_id = {
+      owner_id: currentUser.id
+    }
     this.handleSubmit = this.handleSubmit.bind(this);
     this.navigateToSearch = this.navigateToSearch.bind(this);
     this.handleCloudinary = this.handleCloudinary.bind(this);
@@ -37,8 +40,10 @@ class SpotForm extends React.Component{
 
   handleSubmit(e) {
     e.preventDefault();
-    const spot = Object.assign({}, this.state, this.coords);
+    const spot = Object.assign({}, this.state, this.coords, this.owner_id);
+    console.log({spot});
     this.props.createSpot({ spot });
+    //console.log({spot}.errors.full_messages);
     this.navigateToSearch();
   }
 

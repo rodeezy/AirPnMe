@@ -31,7 +31,8 @@ class Api::SpotsController < ApplicationController
       :lng,
       :description,
       :price,
-      :image_url
+      :image_url,
+      :owner_id
     )
   end
 

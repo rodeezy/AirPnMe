@@ -5,10 +5,12 @@ import GreetingContainer from './greeting/greeting_container';
 const App = ({ children }) => (
   <div>
     <header>
+      <div id='top'>
       <Link to="/">
         <img src="https://s-media-cache-ak0.pinimg.com/originals/45/56/26/45562695c73bc210d01d31a083b9f81c.jpg"
           height='50' width='50' className="logo"/>
       </Link>
+      </div>
       <h1 className="Header">Gotta go? <span className="inner-header">
         Find a bathroom near you on AirPnMe.
       </span></h1>

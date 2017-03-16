@@ -38,15 +38,14 @@ ActiveRecord::Schema.define(version: 20170314185648) do
   end
 
   create_table "spots", force: :cascade do |t|
-    t.integer  "owner_id",   null: false
-    t.string   "location",   null: false
-    t.float    "lat",        null: false
-    t.float    "lng",        null: false
-    t.integer  "price",      null: false
-    t.string   "image_url",  null: false
-    t.string   "about_this", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.integer  "owner_id",    null: false
+    t.float    "lat",         null: false
+    t.float    "lng",         null: false
+    t.integer  "price",       null: false
+    t.string   "image_url",   null: false
+    t.string   "description", null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
     t.index ["owner_id"], name: "index_spots_on_owner_id", using: :btree
     t.index ["price"], name: "index_spots_on_price", using: :btree
   end

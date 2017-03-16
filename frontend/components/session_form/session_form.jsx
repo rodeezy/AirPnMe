@@ -48,9 +48,9 @@ class SessionForm extends React.Component {
 
 	navLink() {
 		if (this.state.modalType === "Log in") {
-			return <button onClick={this.openModal.bind(this, 'Sign Up')}>Sign up</button>;
+			return <button className="lower-login-btn" onClick={this.openModal.bind(this, 'Sign Up')}>Sign up</button>;
 		} else {
-			return <button onClick={this.openModal.bind(this, 'Log in')}>Log in</button>;
+			return <button className="lower-login-btn" onClick={this.openModal.bind(this, 'Log in')}>Log in</button>;
 		}
 	}
 
@@ -95,9 +95,8 @@ class SessionForm extends React.Component {
 					style={ModalStyle}>
 					Welcome to AirPnMe!
 					<br/>
-						Please {this.state.modalType} or {this.navLink()} instead
-						<br/>
-						<button onClick={()=>this.props.login({user: { email: 'guest@guest.com', password: 'password' }})}>
+						<button className="grad1"
+							onClick={()=>this.props.login({user: { email: 'guest@guest.com', password: 'password' }})}>
 							Guest Login
 						</button>
 						<form onSubmit={this.handleSubmit} >
@@ -137,8 +136,15 @@ class SessionForm extends React.Component {
 
 								<br/>
 								<input className="submit-login" type="submit" value={this.state.modalType} />
+								<br/>
+
 							</div>
 						</form>
+						<div className="alt-sign-in-option">
+							{this.state.modalType==="Log In" ? "Don't have an account?"
+								: "Already have an AirPnMe account?"}
+							</div>
+							<div className="nav-link-sign-in">{this.navLink()}</div>
 					</Modal>
 			</div>
 		);

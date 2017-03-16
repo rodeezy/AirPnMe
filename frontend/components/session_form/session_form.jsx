@@ -84,6 +84,9 @@ class SessionForm extends React.Component {
 		return (
 			<div className="form-div">
 				<nav className="login-signup">
+					<Link onClick={() => this.props.login({user: { email: 'guest@guest.com', password: 'password' }})}
+						className="login-signup-btn">Demo</Link>
+					&nbsp;&nbsp;
 					<Link onClick={this.openModal.bind(this, 'Sign Up')} className="login-signup-btn">Sign Up</Link>
 					&nbsp;&nbsp;
 					<Link onClick={this.openModal.bind(this, 'Log in')} className="login-signup-btn">Log In</Link>

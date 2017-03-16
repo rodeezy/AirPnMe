@@ -95,7 +95,7 @@ class SessionForm extends React.Component {
 					style={ModalStyle}>
 					Welcome to AirPnMe!
 					<br/>
-						<button className="grad1"
+						<button className="guest-login"
 							onClick={()=>this.props.login({user: { email: 'guest@guest.com', password: 'password' }})}>
 							Guest Login
 						</button>
@@ -141,7 +141,7 @@ class SessionForm extends React.Component {
 							</div>
 						</form>
 						<div className="alt-sign-in-option">
-							{this.state.modalType==="Log In" ? "Don't have an account?"
+							{this.state.modalType==="Log in" ? "Don't have an account?"
 								: "Already have an AirPnMe account?"}
 							</div>
 							<div className="nav-link-sign-in">{this.navLink()}</div>

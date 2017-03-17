@@ -11,7 +11,7 @@ class SpotForm extends React.Component{
       price: 2
     };
     this.owner_id = {
-      owner_id: currentUser.id
+      owner_id: this.props.currentUser.id
     }
     this.handleSubmit = this.handleSubmit.bind(this);
     this.navigateToSearch = this.navigateToSearch.bind(this);

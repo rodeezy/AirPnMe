@@ -4,7 +4,8 @@ import SpotForm from './spot_form';
 
 const mapStateToProps = (state, { location }) => ({
   lat: location.query.lat,
-  lng: location.query.lng
+  lng: location.query.lng,
+  currentUser: state.session.currentUser
 });
 
 const mapDispatchToProps = dispatch => ({

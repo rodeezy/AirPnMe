@@ -171,6 +171,16 @@ a {
 /*### MAP ###*/
 
 .map {
-  height: 400px;
-  width: 400px;
+  height: 600px;
+  width: 550px;
+}
+
+.right-half {
+  float: right;
+}
+
+@media (max-width: 40em) {
+.map {
+display: none;
+}
 }

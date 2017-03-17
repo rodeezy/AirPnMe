@@ -6,14 +6,14 @@ import SpotMap from './../spot_map/spot_map';
 
 const Search = ({ spots, minPrice, maxPrice, updateFilter }) => (
   <div className="user-pane">
-    <div className="left-half">
+    <div className="right-half">
       <h5>Click Map to Add Spot!</h5>
       <SpotMap
         spots={spots}
         updateFilter={updateFilter}
         singleSpot={false} />
     </div>
-    <div className="right-half">
+    <div className="left-half">
       <FilterForm
         minPrice={minPrice}
         maxPrice={maxPrice}

@@ -21,7 +21,7 @@ const SpotShow = ({ spot, spotId, fetchSpot, children }) => {
           fetchSpot={fetchSpot}
           />
       </div>
-      <div className="right-half spot-details">
+      <div className="left-half spot-details">
         <SpotDetail spot={spot} />
         {children || <ReviewButton spotId={spotId} />}
       </div>

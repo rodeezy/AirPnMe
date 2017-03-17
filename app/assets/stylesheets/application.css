@@ -51,6 +51,10 @@ a {
    font-family: sans-serif;
  }
 
+ img {
+   cursor: pointer;
+ }
+
  button {
    cursor: pointer;
    text-decoration: none;

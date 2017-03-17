@@ -18,6 +18,7 @@ class IndexItem extends React.Component {
     return (
       <div className="spot-index-item"
            onClick={this.handleClick}>
+        <img src={image_url}/>
         <div className="index-item-info">
           <span className="index-item-category">Rating: </span>
           <span className="index-item-copy">
@@ -26,7 +27,6 @@ class IndexItem extends React.Component {
           <span className="index-item-category">Description: </span>
           <span className="index-item-copy">{description}</span>
         </div>
-        <img src={image_url}/>
       </div>
     );
   }

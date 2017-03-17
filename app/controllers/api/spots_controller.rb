@@ -15,8 +15,12 @@ class Api::SpotsController < ApplicationController
   end
 
   def create
-    @spot = Spot.create!(spot_params)
-    render :show
+    @spot = Spot.new(spot_params)
+    if @spot.save
+      render :show
+    else
+      render json: @spot.errors.full_messages, status: 422
+    end
   end
 
   private

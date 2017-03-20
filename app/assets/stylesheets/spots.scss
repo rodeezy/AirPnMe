@@ -1,0 +1,29 @@
+.spot-results {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+
+.spot-index-item img {
+  width: 100%;
+  height: 90%;
+}
+
+.spot-index-item {
+  width: 180px;
+  height: 160px;
+  padding: 10px;
+}
+
+.spot-index-item .index-item-copy {
+  font-weight: 700;
+  color: #484848;
+  font-family: Circular;
+  height: 10%;
+  text-overflow: ellipsis;
+  max-height: 0.1em;
+  line-height: 0.1em;
+  max-width: 100%;
+  white-space: nowrap;
+}

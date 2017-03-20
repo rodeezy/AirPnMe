@@ -20,11 +20,10 @@ class IndexItem extends React.Component {
            onClick={this.handleClick}>
         <img src={image_url}/>
         <div className="index-item-info">
-          <span className="index-item-category">Rating: </span>
+          {/*<span className="index-item-category">Rating: </span>
           <span className="index-item-copy">
             {average_rating || "No reviews yet"}
-          </span>
-          <span className="index-item-category">Description: </span>
+          </span>*/}
           <span className="index-item-copy">{description}</span>
         </div>
       </div>

@@ -14,7 +14,7 @@ const SpotDetail = ({ spot }) => {
       <ul className="spot-list">
         <img className="index-image" src={spot.picture_url}/>
         <li>Rating: {spot.average_rating || "No reviews yet"}</li>
-        <li>Description: {spot.description}</li>
+        <li>{spot.description}</li>
         <li>Seats: {spot.seating}</li>
         <li>Latitude: {spot.lat}</li>
         <li>Longitude: {spot.lng}</li>

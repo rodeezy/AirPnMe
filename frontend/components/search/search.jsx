@@ -13,11 +13,11 @@ const Search = ({ spots, minPrice, maxPrice, updateFilter }) => (
         updateFilter={updateFilter}
         singleSpot={false} />
     </div>
+    <FilterForm
+      minPrice={minPrice}
+      maxPrice={maxPrice}
+      updateFilter={updateFilter} />
     <div className="left-half">
-      <FilterForm
-        minPrice={minPrice}
-        maxPrice={maxPrice}
-        updateFilter={updateFilter} />
       <SpotIndex spots={spots} />
     </div>
   </div>

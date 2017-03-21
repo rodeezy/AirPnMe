@@ -8,7 +8,8 @@ import Search from './search';
 const mapStateToProps = state => ({
   spots: asArray(state),
   minPrice: state.filters.minPrice,
-  maxPrice: state.filters.maxPrice
+  maxPrice: state.filters.maxPrice,
+  amenities: state.filters.amenities
 });
 
 const mapDispatchToProps = dispatch => ({

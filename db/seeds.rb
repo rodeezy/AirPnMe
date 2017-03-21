@@ -12,11 +12,11 @@ Spot.create({owner_id: 1, description: 'PIER 39',
   lat: 37.8099331369301, lng: -122.410423283, price: 0})
 
 Spot.create({owner_id: 1, description: 'The Exploratorium',
-  image_url: "https://res.cloudinary.com/dfsandkf4/image/upload/v1489786442/bssgy7jteuiqkap9idmq.jpg",
+  image_url: "https://media-cdn.tripadvisor.com/media/photo-s/03/d5/08/a5/the-exploratorium.jpg",
   lat: 37.8024600488627, lng: -122.402114868164, price: 0})
 
 Spot.create({owner_id: 1, description: 'Coit Tower',
-  image_url: "https://res.cloudinary.com/dfsandkf4/image/upload/v1489787005/lf31wvgtgn7l6avg4jqh.jpg",
+  image_url: "https://upload.wikimedia.org/wikipedia/commons/d/de/Coittower1.jpg",
   lat: 37.8024600488627, lng: -122.405891418457, price: 0})
 
 Spot.create({owner_id: 1, description: 'Ferry Building',

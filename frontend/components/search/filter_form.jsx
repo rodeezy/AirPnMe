@@ -14,7 +14,7 @@ const toggleShow = () => (
   jQuery('#range-wrapper').toggle('show')
 )
 
-const wrapperStyle = { width: 400 };
+const wrapperStyle = { width: 400, display: 'none' };
 
 const FilterForm = ({ minPrice, maxPrice, updateFilter }) => {
   const handleChanges = (value) => {
@@ -22,10 +22,10 @@ const FilterForm = ({ minPrice, maxPrice, updateFilter }) => {
     updateFilter('maxPrice', value[1]);
   }
   return (
-    <div>
+    <div className='filter-form'>
       <input id="pac-input" className="controls" type="text" placeholder="Anywhere" />
       <br/>
-      <button onClick={toggleShow}>Price</button>
+      <button onClick={toggleShow}>Price range &#9660;</button>
       <div id='range-wrapper' style={wrapperStyle}>
         <Range onChange={handleChanges}
           min={0} max={20} defaultValue={[minPrice, maxPrice]} tipFormatter={value => `$${value}`} />

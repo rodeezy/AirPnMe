@@ -1,9 +1,16 @@
+.user-pane {
+  display: flex;
+  flex-direction: row;
+}
+
 .spot-results {
   display: flex;
   justify-content: space-between;
 }
 
-
+SpotMap {
+  position: fixed;
+}
 
 .spot-index-item img {
   width: 100%;
@@ -14,6 +21,7 @@
   width: 95%;
   height: 10%;
   padding: 10px;
+  padding-left: 0px;
 }
 
 .spot-index-item .index-item-copy {

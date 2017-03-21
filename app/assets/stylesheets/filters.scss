@@ -11,3 +11,20 @@
 .filter-form button:hover {
   background: #e9e9e9;
 }
+
+#pac-input {
+  z-index: 10 !important;
+  left: 86px !important;
+  top: 23px !important;
+  font-size: 14px;
+  padding: 8px 0px 8px 30px;
+  position: fixed !important;
+  background-size: 20px;
+  background-repeat: no-repeat;
+  background-position-y: 5.3px;
+  background-position-x: 2px;
+  background-image: url('https://cdn1.iconfinder.com/data/icons/hawcons/32/698956-icon-111-search-128.png');
+}
+
+#pac-input::selection {
+}

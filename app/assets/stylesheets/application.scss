@@ -19,6 +19,7 @@
  }*/
  /*@import "font-awesome-sprockets";
  @import "font-awesome";*/
+@import 'session.scss';
 @import "spots.scss";
 @import "rc-slider.scss";
 @import "filters.scss";
@@ -27,6 +28,7 @@
   color: #ff5a5f;
   width: 550px;
   margin-top: 70px;
+  line-height: .65em;
 }
 
 .inner-header {
@@ -34,11 +36,18 @@
   font-weight: 200;
 }
 
+.line-two {
+  margin-top: -1.17%;
+  color: black;
+  font-weight: 200;
+}
+
 .logo {
   border-radius: 25px;
-  margin-top: 8px;
+  margin-top: 0px;
   margin-left: 10px;
   position: fixed;
+  z-index: 10;
 }
 
 Link {
@@ -71,110 +80,6 @@ a {
    width: 100%;
    background: white;
  }
-
-.login-signup {
-  position: fixed;
-  top: 20px;
-  right: 0;
-  background-color: white;
-}
-
-.login-signup-btn {
-  font-family: sans-serif;
-  cursor: pointer;
-  font-size: 15px;
-  color: #4a4a4a;
-  margin-left: 5px;
-  margin-right: 15px;
-  /*background: none;
-  border: none;*/
-}
-
-.login-signup-btn:hover {
-  text-decoration: underline;
-}
-
-/*### SIGN UP MODAL ###*/
-.ReactModal__Content {
-  text-align: center;
-  border-radius: 2px !important;
-}
-
-.guest-login {
-  /*background: -webkit-linear-gradient(left, red, orange, yellow, green, blue, indigo, violet);
-  background: -o-linear-gradient(left, red, orange, yellow, green, blue, indigo, violet);
-  background: -moz-linear-gradient(left, red, orange, yellow, green, blue, indigo, violet);
-  background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
-  color: white;
-  text-shadow: -1px -1px 0 #000, -1px -1px 0 #000, -1px -1px 0 #000, -1px -1px 0 #000;*/
-  border-radius: 3px;
-  height: 30px;
-  width: 100px;
-  font-size: 11px;
-  background-color: #ff7e82;
-  border-color: #ff7e82;
-  font-family: sans-serif;
-  color: white;
-  margin-top: 5px;
-  /*border: none;*/
-}
-
-.login-input {
-  width: 100%;
-  height: 30px;
-  font-family: sans-serif;
-  background-size: 20px;
-  background-repeat: no-repeat;
-  background-position: right;
-  background-position-x: 268px;
-  margin-bottom: 5px;
-}
-
-.login-input::selection {
-  border-color: blue;
-  background: #a8d1ff;
-}
-
-.login-input[type=email] {
-  background-image: url(https://image.flaticon.com/icons/png/128/20/20061.png);
-}
-.login-input[type=text] {
-  background-image: url(http://www.iconninja.com/files/739/235/684/user-icon.png);
-}
-.login-input[type=password] {
-  background-image: url(https://cdn1.iconfinder.com/data/icons/hawcons/32/698959-icon-114-lock-128.png);
-}
-.errors-list{
-  list-style: none;
-}
-
-.submit-login {
-  height: 40px;
-  width: 100%;
-  background-color: #ff7e82;
-  border-color: #ff7e82;
-  border-radius: 3px;
-  margin-top: 5px;
-  color: white;
-  cursor: pointer;
-}
-
-.alt-sign-in-option {
-  float: left;
-  font-size: 14px;
-  margin-top: 15px;
-}
-
-.lower-login-btn {
-  margin-top: 10px;
-  float: right;
-  background-color: white;
-  border-color: #ff5a5f;
-  color: #ff5a5f;
-  border-radius: 3px;
-  height: 26px;
-  width: 60px;
-}
 
 /*### MAP ###*/
 

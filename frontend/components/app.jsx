@@ -12,8 +12,8 @@ const App = ({ children }) => (
       </Link>
       </div>
       <h1 className="Header">Gotta go? <span className="inner-header">
-        Find a bathroom near you on AirPnMe.
-      </span></h1>
+        Find a bathroom near you</span></h1>
+      <h1 className="line-two">on AirPnMe.</h1>
       <GreetingContainer />
     </header>
     {children}

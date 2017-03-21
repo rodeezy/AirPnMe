@@ -68,11 +68,17 @@ class SessionForm extends React.Component {
 	renderErrors() {
 		return(
 			<ul className="errors-list">
-				{this.props.errors.map((error, i) => (
-					<li key={`error-${i}`}>
-						{error}
-					</li>
-				))}
+				{this.props.errors.map((error, i) => {
+						{
+							if (error.includes('Fname')){
+								return <li key={`error-${i}`}>First name can't be blank</li>;
+							} else if (error.includes('Lname')){
+								return <li key={`error-${i}`}>Last name can't be blank</li>;
+							} else {
+								return <li key={`error-${i}`}>{error}</li>;
+							}
+						}
+				})}
 			</ul>
 		);
 	}

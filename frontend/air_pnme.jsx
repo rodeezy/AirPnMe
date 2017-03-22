@@ -20,6 +20,5 @@ document.addEventListener('DOMContentLoaded', () => {
   window.logout = logout;
   Modal.setAppElement(document.body);
   const root = document.getElementById('root');
-  $("#pac-input").appendTo(".filter-form");
   ReactDOM.render(<Root store={store}/>, root);
 });

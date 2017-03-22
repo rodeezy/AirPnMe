@@ -20,11 +20,18 @@ class IndexItem extends React.Component {
            onClick={this.handleClick}>
         <img src={image_url}/>
         <div className="index-item-info">
-          {/*<span className="index-item-category">Rating: </span>
-          <span className="index-item-copy">
+          <span className="index-item-description">
+            <span className='index-item-price'>{(this.props.spot.price ? `$${this.props.spot.price}` : "Free")}  </span>
+            {description}
+          </span>
+          <br />
+          <span className="index-item-privacy">
+            {this.props.spot.price? 'Private' : 'Public'}
+          </span>
+          <br />
+          <span className="index-item-rating">
             {average_rating || "No reviews yet"}
-          </span>*/}
-          <span className="index-item-copy">{description}</span>
+          </span>
         </div>
       </div>
     );

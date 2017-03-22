@@ -7,6 +7,8 @@ end
 
 gem 'rails_12factor'
 
+gem 'faker'
+
 gem 'figaro'
 
 gem 'font-awesome-sass'

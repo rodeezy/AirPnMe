@@ -8,7 +8,6 @@ const ModalStyle = {
     backgroundColor   : 'rgba(255, 255, 255, 0.75)'
   },
   content : {
-    height                : '360px',
     width                 : '292px',
     top                   : '50%',
     left                  : '50%',

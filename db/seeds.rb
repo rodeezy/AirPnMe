@@ -5,6 +5,9 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+require_relative('image_urls')
+
 User.create({fname:'Guest', lname:'McGuestface', email:'guest@guest.com', password:'password'})
 
 Spot.create({owner_id: 1, description: 'PIER 39',
@@ -61,10 +64,10 @@ Spot.create({owner_id: 1, description: 'Conservatory of Flowers',
 
 Spot.create({owner_id: 1, description: 'Golden Gate Park Tennis Courts',
   image_url: "https://lh6.googleusercontent.com/-3NBkAkBSnwE/VZq7xkEo9eI/AAAAAAAADRY/2NwICojDBLsWimIZOKE7EbojDNrDCpmcgCJkC/h16383-k/=s16383",
-  lat: 37.770141, lng: -37.770141, price: 0})
+  lat: 37.770141, lng: -122.459893, price: 0})
 
 Spot.create({owner_id: 1, description: 'Sharon Meadow',
-  image_url: "https://lh3.googleusercontent.com/-NcaVjYZKXco/VyYlQHGhulI/AAAAAAAAAmU/6Xs4neD0IaIGFZX3uuIZUVsBXPA1OpWawCJkC/h16383-k/=s16383",
+  image_url: "http://sfrecpark.org/wp-content/uploads/IMG_5974-e1399335963721-600x400.jpg",
   lat: 37.769364, lng: -122.457713, price: 0})
 
 Spot.create({owner_id: 1, description: 'Kezar Stadium',
@@ -86,3 +89,27 @@ Spot.create({owner_id: 1, description: 'Park Branch Library',
 Spot.create({owner_id: 1, description: "Panhandle Children's Playground",
   image_url: "https://lh5.googleusercontent.com/-8SoTaXt-VZA/Ufm_6RVOvDI/AAAAAAAAACE/6cksrFlZNjcK5DciG0u0fIaJqsduKMG5QCJkC/h16383-k/=s16383",
   lat: 37.772366, lng: -122.448321, price: 0})
+
+  #faker:: fname: Faker::Name.first_name, lname: Faker::Name.last_name,
+  # lat: Faker::Address.latitude, lng: Faker::Address.longitude.
+  # description: fname's Faker::Hacker.adjective bathroom or Faker::Hacker.adjective Faker::Adress.street_name bathroom
+
+  #bounds: bottom: 37.710163, right: -122.388417, left (bottom): -122.502833, top (lower) (left): 37.787663
+  #top portion bounds:: bottom: 37.787663, left: -122.479284, top: 37.803457, right: -122.402027
+bottom = 37.710163
+right = -122.388417
+left = -122.502833
+top = 37.787663 #ubottom
+
+uleft = -122.479284
+utop = 37.803457
+uright = -122.402027
+
+50.times do |i|
+  region = rand(2) == 0 ? [bottom, top, left, right] : [top, utop, uleft, uright]
+  User.create({fname: Faker::Name.first_name, lname: Faker::Name.last_name, email: Faker::Internet.unique.email, password:'password'})
+  Spot.create({owner_id: i+2, description: (rand(2) == 0 ? User.last.fname + "'s " + Faker::Hacker.adjective.capitalize + " " + "bathroom"
+    : Faker::Hacker.adjective + " " + Faker::Address.street_name + " " + "bathroom"),
+    image_url: $urls[i],
+    lat: rand(region[0]..region[1]), lng: rand(region[2]..region[3]), price: rand(1..100)})
+end

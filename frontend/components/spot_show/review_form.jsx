@@ -4,7 +4,7 @@ import { withRouter } from 'react-router';
 class ReviewForm extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { rating: 5, body: "" };
+    this.state = { author_id: this.props.currentUser.id, rating: 5, body: "" };
 
     this.handleSubmit = this.handleSubmit.bind(this);
     this.navigateToSpotShow = this.navigateToSpotShow.bind(this);

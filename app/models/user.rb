@@ -24,7 +24,7 @@ class User < ApplicationRecord
 
   has_many :spots, foreign_key: :owner_id
   has_many :bookings, foreign_key: :author_id
-  has_many :bookings, foreign_key: :author_id
+  has_many :reviews, foreign_key: :author_id
 
   # has_many :favorite_benches,
   # 	through: :favorites,

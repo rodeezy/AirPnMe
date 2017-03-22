@@ -24,14 +24,15 @@ SpotMap {
   padding-left: 0px;
 }
 
-.spot-index-item .index-item-copy {
-  font-weight: 700;
+.index-item-price {
+  font-size: 12px;
+}
+
+.spot-index-item .index-item-description {
   color: #484848;
-  font-family: Circular;
-  height: 10%;
   text-overflow: ellipsis;
-  max-height: 1.8em;
-  line-height: 1.8em;
+  // max-height: 1.8em;
+  // line-height: 1.8em;
   overflow: hidden;
   max-width: 180px;
   white-space: nowrap;

@@ -23,7 +23,6 @@ const FilterForm = ({ minPrice, maxPrice, updateFilter }) => {
   }
   return (
     <div className='filter-form'>
-      <input id="pac-input" className="controls" type="text" placeholder="Anywhere" />
       <br/>
       <button onClick={toggleShow}>Price range &#9660;</button>
       <div id='range-wrapper' style={wrapperStyle}>

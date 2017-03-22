@@ -3,7 +3,7 @@ const Tooltip = require('rc-tooltip');
 const Slider = require('rc-slider');
 const createSliderWithTooltip = Slider.createSliderWithTooltip;
 const Range = createSliderWithTooltip(Slider.Range);
-const Handle = Slider.Handle;
+const Switch = require('rc-switch');
 
 const handleChange = (filter, updateFilter) => {
   debugger;
@@ -29,6 +29,9 @@ const FilterForm = ({ minPrice, maxPrice, updateFilter }) => {
         <Range onChange={handleChanges}
           min={0} max={20} defaultValue={[minPrice, maxPrice]} tipFormatter={value => `$${value}`} />
       </div>
+      <button>Amenities &#9660;</button>
+      <button>Privacy &#9660;</button>
+      <Switch />
     </div>
   );
 }

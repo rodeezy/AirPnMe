@@ -27,11 +27,12 @@ const FilterForm = ({ minPrice, maxPrice, updateFilter }) => {
       <button onClick={toggleShow}>Price range &#9660;</button>
       <div id='range-wrapper' style={wrapperStyle}>
         <Range onChange={handleChanges}
-          min={0} max={20} defaultValue={[minPrice, maxPrice]} tipFormatter={value => `$${value}`} />
+          min={0} max={100} defaultValue={[0, 100]} tipFormatter={value => `$${value}`} />
       </div>
       <button>Amenities &#9660;</button>
       <button>Privacy &#9660;</button>
       <Switch />
+      <button>Stuff</button>
     </div>
   );
 }

@@ -4,7 +4,7 @@ Rails.application.routes.draw do
     resources :reviews, only: [:create]
     resource :user, only: [:create]
     resource :session, only: [:create, :destroy, :show]
-    resource :bookings, only: [:create, :destroy]
+    resources :bookings, only: [:create, :destroy]
   end
 
   root "static_pages#root"

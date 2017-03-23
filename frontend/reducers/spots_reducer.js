@@ -1,5 +1,6 @@
 import { CREATE_REVIEW,
   RECEIVE_REVIEW,
+  RECEIVE_BOOKING,
   RECEIVE_SPOTS,
   RECEIVE_SPOT } from '../actions/spot_actions';
 import merge from 'lodash/merge';
@@ -16,7 +17,14 @@ const SpotsReducer = (state = {}, action) => {
       return merge({}, state, newSpot);
     case RECEIVE_REVIEW:
       const review = action.review;
+      console.log(newState);
       newState[review.spot_id].reviews.push(review)
+      console.log(newState);
+      return newState;
+    case RECEIVE_BOOKING:
+      const booking = action.booking;
+      console.log(newState);
+      newState[booking.spot_id].bookings.push(booking)
       return newState;
     default:
       return state;

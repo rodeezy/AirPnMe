@@ -21,6 +21,14 @@ export const createReview = (data) => {
   });
 };
 
+export const createBooking = (data) => {
+  return $.ajax({
+    method: 'POST',
+    url: 'api/bookings',
+    data
+  });
+};
+
 export const createSpot = (data) => {
   return $.ajax({
     method: 'POST',

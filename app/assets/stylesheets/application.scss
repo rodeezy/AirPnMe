@@ -20,8 +20,10 @@
  /*@import "font-awesome-sprockets";
  @import "font-awesome";*/
 @import 'session.scss';
-@import "spots.scss";
+// @import "spots/spots.scss";
+@import "spots/*";
 @import "rc-slider.scss";
+@import "rc-switch.scss";
 @import "filters.scss";
 
 .Header {

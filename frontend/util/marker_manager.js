@@ -11,6 +11,15 @@ export default class MarkerManager {
     this._markersToRemove = this._markersToRemove.bind(this);
   }
 
+  /*
+  TODO:
+    var beachMarker = new google.maps.Marker({
+      position: myLatLng,
+      map: map,
+      icon: 'brown_markerA.png'
+    });
+  */
+
   updateMarkers(spots){
     this.spots = spots;
     this._spotsToAdd().forEach(this._createMarkerFromSpot);

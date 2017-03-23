@@ -1,5 +1,5 @@
 class Api::BookingsController < ApplicationController
-  before_action :require_logged_in, only: [:create]
+  before_action :require_logged_in
 
   def create
     @booking = Booking.new(booking_params)
@@ -9,6 +9,16 @@ class Api::BookingsController < ApplicationController
     else
       render json: @booking, status: :unprocessable_entity
     end
+  end
+
+  def index
+    @bookings = Booking.all.where(author_id: current_user.id)
+    render :show
+  end
+
+  def destroy
+    @booking = Booking.find(params[:id])
+    render :json => @booking.destroy
   end
 
   private

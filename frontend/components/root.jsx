@@ -40,6 +40,7 @@ const Root = ({ store }) => {
             <Route path="review" component={ReviewFormContainer} onEnter={_ensureLoggedIn} />
             <Route path="booking" component={BookingFormContainer} onEnter={_ensureLoggedIn} />
           </Route>
+          <Route path="/user/bookings" />
         </Route>
       </Router>
     </Provider>

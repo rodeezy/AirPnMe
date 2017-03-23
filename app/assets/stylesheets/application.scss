@@ -19,12 +19,7 @@
  }*/
  /*@import "font-awesome-sprockets";
  @import "font-awesome";*/
-@import 'session.scss';
-// @import "spots/spots.scss";
-@import "spots/*";
-@import "rc-slider.scss";
-@import "rc-switch.scss";
-@import "filters.scss";
+//imports on bottom
 
 .Header {
   color: #ff5a5f;
@@ -49,6 +44,11 @@
   margin-top: 0px;
   margin-left: 10px;
   z-index: 10;
+}
+
+input {
+  border-radius: 2px;
+  border: 1px solid #aaa;
 }
 
 Link {
@@ -87,6 +87,12 @@ a {
    border-bottom: 2px solid #ededed;
  }
 
+#left-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
  #top {
    display: flex;
    flex-direction: row;
@@ -113,3 +119,10 @@ a {
 display: none;
 }
 }
+
+@import 'session.scss';
+// @import "spots/spots.scss";
+@import "spots/*";
+@import "rc-slider.scss";
+@import "rc-switch.scss";
+@import "filters.scss";

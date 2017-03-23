@@ -12,7 +12,15 @@ let _mapOptions = {
   center: {lat: 37.773972, lng: -122.431297}, // San Francisco coords
   zoom: 13
 };
+/*Bounds that show all: _.ld
+b: cd
+  b: -122.52334183241771
+  f: -122.33451431776928
 
+f: jd
+  b: 37.84865530165664
+  f: 37.685816333957085
+  */
 class SpotMap extends Component {
 
   componentDidMount() {

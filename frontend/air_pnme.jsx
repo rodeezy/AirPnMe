@@ -4,6 +4,7 @@ import Root from './components/root';
 import configureStore from './store/store';
 import Modal from 'react-modal';
 import {signup, login, logout} from './util/session_api_util'
+import SpotMap from './components/spot_map/spot_map'
 
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -15,9 +16,6 @@ document.addEventListener('DOMContentLoaded', () => {
     store = configureStore();
   }
   window.store = store;
-  window.signup = signup;
-  window.login = login;
-  window.logout = logout;
   Modal.setAppElement(document.body);
   const root = document.getElementById('root');
   ReactDOM.render(<Root store={store}/>, root);

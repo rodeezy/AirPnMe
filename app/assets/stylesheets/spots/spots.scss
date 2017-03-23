@@ -8,6 +8,16 @@
   justify-content: space-between;
 }
 
+.left-half-spot-results {
+  flex-grow: 1;
+  flex-basis: 0;
+}
+
+.right-half-spot-results {
+  flex-grow: 1;
+  flex-basis: 0;
+}
+
 SpotMap {
   position: fixed;
 }

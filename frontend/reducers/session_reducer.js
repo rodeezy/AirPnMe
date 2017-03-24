@@ -28,12 +28,12 @@ const SessionReducer = (state = _nullUser, action) => {
         errors
       });
     case RECEIVE_BOOKING:
-      ;
       const booking = action.booking;
       newState.currentUser.bookings.push(booking);
       return newState;
     case CLEAR_ERRORS:
-      newState[errors] = [];
+      // debugger;
+      newState.errors = [];
       return newState;
     default:
       return state;

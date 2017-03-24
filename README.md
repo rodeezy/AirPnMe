@@ -16,6 +16,8 @@ In the SpotDetails component, spots are rendered listing all information about t
 
 Spots are also rendered at /search which makes an API call to fetch spots filtered by availability, price, and location.
 
+![image of spots index](docs/screenshots/splash.png)
+
 ### Spot Search with Google Maps
 
 There are two active search bars, one at / and another at /search that allow for location. When the search form is submitted on the home page, users are redirected to the search page where their filtered results are available.
@@ -24,13 +26,13 @@ At /search, a google map is rendered with markers for each spot whose coordinate
 
 ### Bookings
 
-Users can book spot by making bookings which are stored in the database. Bookings have columns for user_id, spot_id, start_date, and end_date. Bookings are restricted by their availability based on spot and dates booked.
+Users can book spots by making bookings which are stored in the database. Bookings have columns for user_id, spot_id, start_time, and end_time. Bookings are restricted by their availability based on spot and dates booked.
 
 Bookings are rendered at /:id/bookings, filtered for the logged in user who can view and cancel their bookings.
 
 ### Reviews
 
-Logged in users can leave reviews for spots. Review ratings are input and viewed as stars on the SpotDetails page. Reviews are stored in the database with a user_id, spot_id, and a body.
+Logged in users can leave reviews for spots. Review ratings are input and viewed as decimal numbers (floats) on the SpotDetails page. Reviews are stored in the database with a user_id, spot_id, rating and a body.
 
 Reviews are rendered in the SpotDetails component, filtered for that spot.
 

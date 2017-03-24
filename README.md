@@ -24,6 +24,19 @@ There are two active search bars, one at / and another at /search that allow for
 
 At /search, a google map is rendered with markers for each spot whose coordinates lie within the bounds of the map. The map actively filters the rendered spots as the map is moved or zoomed.
 
+##### The Search Dilemma
+
+The Google Maps API provides a nice search bar for you. It is unfortunately placed inside the map. Only by commenting the bottom line out can you style it into place
+
+```javascript
+var input = document.getElementById('pac-input');
+var searchBox = new google.maps.places.SearchBox(input);
+// map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
+}
+```
+
+(The docs on this aren't very clear, so it takes a while to figure this one out).
+
 ### Bookings
 
 Users can book spots by making bookings which are stored in the database. Bookings have columns for user_id, spot_id, start_time, and end_time. Bookings are restricted by their availability based on spot and dates booked.

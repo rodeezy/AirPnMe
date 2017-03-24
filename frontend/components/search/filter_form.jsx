@@ -33,7 +33,6 @@ const FilterForm = ({ minPrice, maxPrice, updateFilter }) => {
     <div className='filter-form'>
       <br/>
       <button onClick={toggleShow('#range-wrapper')}>Price range &#9660;</button>
-      <button>Amenities &#9660;</button>
       <button id='privacy-btn' onClick={toggleShow('#switch-wrapper')}>Privacy &#9660;</button>
       <div id='range-wrapper' className='funwrap' style={wrapperStyle}>
         <Range onChange={handleChanges}

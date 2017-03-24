@@ -122,3 +122,9 @@ uright = -122.402027
     Review.create(author_id: rand(User.all.length), spot_id: i + 1, rating: rand(0..5), body: Faker::Lorem.paragraph)
   end
 end
+
+14.times do |i|
+  Booking.create(author_id: 1, spot_id: i + 10,
+  start_time: DateTime.new(2018, 1, i * 2 + 1, 3, 4, 5),
+  end_time: DateTime.new(2018, 1, i * 2 + 2, 3, 4, 5),)
+end

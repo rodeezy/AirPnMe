@@ -114,8 +114,8 @@ uright = -122.402027
 50.times do |i|
   region = rand(2) == 0 ? [bottom, top, left, right] : [top, utop, uleft, uright]
   User.create({fname: Faker::Name.first_name, lname: Faker::Name.last_name, email: Faker::Internet.unique.email, password:'password'})
-  Spot.create({owner_id: i+2, description: (rand(2) == 0 ? User.last.fname + "'s " + Faker::Hacker.adjective.capitalize + " " + "bathroom"
-    : Faker::Hacker.adjective + " " + Faker::Address.street_name + " " + "bathroom"),
+  Spot.create({owner_id: i+2, description: (rand(2) == 0 ? User.last.fname + "'s " + Faker::Hacker.adjective.titleize + " " + "Bathroom"
+    : Faker::Hacker.adjective.titleize + " " + Faker::Address.street_name + " " + "Bathroom"),
     image_url: $urls[i],
     lat: rand(region[0]..region[1]), lng: rand(region[2]..region[3]), price: rand(1..100)})
   rand(3..6).times do

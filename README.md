@@ -24,7 +24,7 @@ At /search, a google map is rendered with markers for each spot whose coordinate
 
 ### Bookings
 
-Users can book restrooms by making bookings which are stored in the database. Bookings have columns for user_id, spot_id, start_date, and end_date. Bookings are restricted by their availability based on spot and dates booked.
+Users can book spot by making bookings which are stored in the database. Bookings have columns for user_id, spot_id, start_date, and end_date. Bookings are restricted by their availability based on spot and dates booked.
 
 Bookings are rendered at /:id/bookings, filtered for the logged in user who can view and cancel their bookings.
 

@@ -2,6 +2,7 @@ import {
   RECEIVE_CURRENT_USER,
   LOGOUT,
   RECEIVE_ERRORS } from '../actions/session_actions';
+import {RECEIVE_BOOKING} from '../actions/spot_actions';
 import merge from 'lodash/merge';
 
 const _nullUser = Object.freeze({
@@ -24,6 +25,11 @@ const SessionReducer = (state = _nullUser, action) => {
       return merge({}, _nullUser, {
         errors
       });
+    case RECEIVE_BOOKING:
+      let newState = merge({}, state);
+      const booking = action.booking;
+      newState.currentUser.bookings.push(booking);
+      return newState;
     default:
       return state;
   }

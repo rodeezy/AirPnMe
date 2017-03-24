@@ -5,6 +5,7 @@ class IndexItem extends React.Component {
   constructor(props) {
     super(props);
     this.handleClick = this.handleClick.bind(this);
+    // this.imageStyle = this.imageStyle.bind(this);
   }
 
   handleClick() {
@@ -12,13 +13,23 @@ class IndexItem extends React.Component {
     this.props.router.push(`spots/${spotId}`);
   }
 
+  // imageStyle(imgUrl) {
+  //   return (
+  //     {'background-image': `url(${imgUrl})`}
+  //   )
+  // }
+
   render() {
+    //debugger;
     const { average_rating, description, image_url } = this.props.spot;
 
     return (
       <div className="spot-index-item"
            onClick={this.handleClick}>
-        <img src={image_url}/>
+           <div className='img-container'>
+             <img src={image_url} />
+           </div>
+
         <div className="index-item-info">
           <span className="index-item-description">
             <span className='index-item-price'>{(this.props.spot.price ? `$${this.props.spot.price}` : "Free")}  </span>

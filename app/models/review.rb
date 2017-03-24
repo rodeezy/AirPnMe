@@ -7,8 +7,8 @@
 #  spot_id    :integer          not null
 #  rating     :integer          not null
 #  body       :string           not null
-#  created_at :datetime         not null
-#  updated_at :datetime         not null
+#  created_at :date         not null
+#  updated_at :date         not null
 #
 
 class Review < ApplicationRecord

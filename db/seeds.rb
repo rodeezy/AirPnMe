@@ -27,7 +27,7 @@ Spot.create({owner_id: 1, description: 'Ferry Building',
   lat: 37.7953388901613, lng: -122.393445968628, price: 0})
 
 Spot.create({owner_id: 1, description: 'Ghiradelli Square',
-  image_url: "https://lh4.googleusercontent.com/-zTVa6NhdUb0/WIY85BG6SBI/AAAAAAAAEEs/xZw98ri55tYzMTjKK19OgR-mKMQ4pOCKQCLIB/h16383-k/=s16383",
+  image_url: "https://image.ibb.co/jLiqmF/IMG_20160305_102608246_HDR.jpg",
   lat: 37.794877687518536, lng: -122.42297172546387, price: 0})
 
 Spot.create({owner_id: 1, description: 'Union Square',
@@ -55,11 +55,11 @@ Spot.create({owner_id: 1, description: 'Yerba Buena Square Shopping',
   lat: 37.782305, lng: -122.403064, price: 0})
 
 Spot.create({owner_id: 1, description: 'Peacock Meadow',
-  image_url: "https://lh6.googleusercontent.com/-jfvkSMTnO5U/V2svqYEk4DI/AAAAAAAAB0o/15sQdqHtcHUrs3g2V1q197oICCSA9O-PACJkC/h16383-k/=s16383",
+  image_url: "https://image.ibb.co/eqEKfa/2016_06_22.jpg",
   lat: 37.771696, lng: -122.457713, price: 0})
 
 Spot.create({owner_id: 1, description: 'Conservatory of Flowers',
-  image_url: "https://lh5.googleusercontent.com/-e_ibfVIdmfM/V5kQaPHYVCI/AAAAAAAAACs/dS8qiI5tuPU4mKmkRPTFHpTkye6pfoFLwCJkC/h16383-k/=s16383",
+  image_url: "https://image.ibb.co/f3XSYv/COF_building_with_pink_red_flowers.jpg",
   lat: 37.772688, lng: -122.458899, price: 0})
 
 Spot.create({owner_id: 1, description: 'Golden Gate Park Tennis Courts',
@@ -79,7 +79,7 @@ Spot.create({owner_id: 1, description: 'UCSF',
   lat: 37.762905, lng: -122.458018, price: 0})
 
 Spot.create({owner_id: 1, description: "Koret Children's Quarter Playground",
-  image_url: "https://lh4.googleusercontent.com/-3EW85dX8wSM/V76JAVXY2WI/AAAAAAABuNQ/qoKwNZyGRAAeSdpnTGhariMOL88D0SbSQCJkC/h16383-k/=s16383",
+  image_url: "",
   lat: 37.768212, lng: -122.457102, price: 0})
 
 Spot.create({owner_id: 1, description: 'Park Branch Library',
@@ -87,8 +87,14 @@ Spot.create({owner_id: 1, description: 'Park Branch Library',
   lat: 37.770409, lng: -122.451305, price: 0})
 
 Spot.create({owner_id: 1, description: "Panhandle Children's Playground",
-  image_url: "https://lh5.googleusercontent.com/-8SoTaXt-VZA/Ufm_6RVOvDI/AAAAAAAAACE/6cksrFlZNjcK5DciG0u0fIaJqsduKMG5QCJkC/h16383-k/=s16383",
+  image_url: "https://image.ibb.co/iP5s0a/2013_07_31.jpg",
   lat: 37.772366, lng: -122.448321, price: 0})
+
+
+
+  # https://image.ibb.co/cXJO6F/2016_12_31.jpg
+  # https://image.ibb.co/gSsSYv/20160831_195532.jpg
+
 
   #faker:: fname: Faker::Name.first_name, lname: Faker::Name.last_name,
   # lat: Faker::Address.latitude, lng: Faker::Address.longitude.

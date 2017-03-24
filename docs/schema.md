@@ -26,8 +26,8 @@ column name | data type | details
 id          | integer   | not null, primary key
 author_id   | integer   | not null, foreign key (references users), indexed
 spot_id     | integer   | not null, foreign key (references spot ), indexed
-start_time  | dateTime  | not null
-end_time    | dateTime  | not null
+start_time  | date  | not null
+end_time    | date  | not null
 
 ## reviews
 column name | data type | details

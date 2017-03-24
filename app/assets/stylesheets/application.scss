@@ -75,6 +75,10 @@ a {
    border: 1px solid;
  }
 
+ button:focus {outline:0;}
+
+ ul {list-style: none;}
+
  header {
    font-size: 14px;
   //  position: fixed;
@@ -120,9 +124,11 @@ display: none;
 }
 }
 
+@import '_datepicker.css';
 @import 'session.scss';
 // @import "spots/spots.scss";
 @import "spots/*";
 @import "rc-slider.scss";
 @import "rc-switch.scss";
 @import "filters.scss";
+@import "bookings.scss";

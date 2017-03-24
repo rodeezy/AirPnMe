@@ -1,10 +1,11 @@
 import React from 'react';
 import { withRouter } from 'react-router';
+import { DateRangePicker } from 'react-dates';
 
 class BookingForm extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { author_id: this.props.currentUser.id, start_time: new Date(Date.now()), end_time: new Date(Date.now()+6e3) };
+    this.state = { author_id: this.props.currentUser.id, start_time: new Date(Date.now()), end_time: new Date(Date.now()+1e3*3600*24) };
 
     this.handleSubmit = this.handleSubmit.bind(this);
     this.navigateToSpotShow = this.navigateToSpotShow.bind(this);
@@ -33,22 +34,22 @@ class BookingForm extends React.Component {
     return (
       <div className="booking-form">
         <form onSubmit={ this.handleSubmit }>
-          <label>Start Time</label>
+
+          <label>Start Date</label>
           <br/>
           <input type="date"
             value={ this.state.start_time }
             onChange={ this.update("start_time") }/>
           <br/>
 
-          <label>End Time</label>
+          <label>End Date</label>
           <br/>
           <input type="date"
             value={ this.state.end_time }
             onChange={ this.update("end_time") }/>
           <br/>
-          <input type="submit"/>
+          <input id='booking-submit' className='guest-login' type="submit"/>
         </form>
-        <button onClick={ this.navigateToSpotShow }>Cancel</button>
       </div>
     );
  }

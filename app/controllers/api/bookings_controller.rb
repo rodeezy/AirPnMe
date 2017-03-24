@@ -13,7 +13,7 @@ class Api::BookingsController < ApplicationController
 
   def index
     @bookings = Booking.all.where(author_id: current_user.id)
-    render :show
+    render :index
   end
 
   def destroy

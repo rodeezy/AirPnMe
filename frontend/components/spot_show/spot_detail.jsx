@@ -14,8 +14,7 @@ const SpotDetail = ({ spot }) => {
       <ul className="spot-list">
         <li>Rating: {spot.average_rating || "No reviews yet"}</li>
         <li>{spot.description}</li>
-        <li>Latitude: {spot.lat}</li>
-        <li>Longitude: {spot.lng}</li>
+        
       </ul>
       <br/>
       <div className="reviews">

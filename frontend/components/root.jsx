@@ -11,6 +11,7 @@ import SpotFormContainer from './spot_form/spot_form_container';
 import SpotShowContainer from './spot_show/spot_show_container';
 import ReviewFormContainer from './spot_show/review_form_container';
 import BookingFormContainer from './spot_show/booking/booking_form_container';
+import BookingIndexContainer from './spot_show/booking/booking_index_container';
 import SessionFormContainer from './session_form/session_form_container';
 
 
@@ -40,7 +41,7 @@ const Root = ({ store }) => {
             <Route path="review" component={ReviewFormContainer} onEnter={_ensureLoggedIn} />
             <Route path="booking" component={BookingFormContainer} onEnter={_ensureLoggedIn} />
           </Route>
-          <Route path="/user/bookings" />
+          <Route path="/user/bookings" component={BookingIndexContainer} />
         </Route>
       </Router>
     </Provider>

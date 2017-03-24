@@ -6,12 +6,11 @@ const Range = createSliderWithTooltip(Slider.Range);
 const Switch = require('rc-switch');
 
 const handleChange = (filter, updateFilter) => {
-  debugger;
   return (e => updateFilter(filter, e.currentTarget.value));
 }
 
-const toggleShow = () => (
-  jQuery('#range-wrapper').toggle('show')
+const toggleShow = (id) => (
+  () => jQuery(id).toggle('show')
 )
 
 const wrapperStyle = { width: 400, display: 'none' };
@@ -21,18 +20,29 @@ const FilterForm = ({ minPrice, maxPrice, updateFilter }) => {
     updateFilter('minPrice', value[0]);
     updateFilter('maxPrice', value[1]);
   }
+  const switchChange = (value) => {
+    updateFilter('maxPrice', maxPrice === 0 ? 100 : 0);
+    $( ".rc-switch" ).click(function() {
+      $( "#popUp" ).fadeIn();
+      setTimeout(function() {
+        $( "#popUp" ).fadeOut();
+      }, 1000);
+    });
+  }
   return (
     <div className='filter-form'>
       <br/>
-      <button onClick={toggleShow}>Price range &#9660;</button>
-      <div id='range-wrapper' style={wrapperStyle}>
+      <button onClick={toggleShow('#range-wrapper')}>Price range &#9660;</button>
+      <button>Amenities &#9660;</button>
+      <button id='privacy-btn' onClick={toggleShow('#switch-wrapper')}>Privacy &#9660;</button>
+      <div id='range-wrapper' className='funwrap' style={wrapperStyle}>
         <Range onChange={handleChanges}
           min={0} max={100} defaultValue={[0, 100]} tipFormatter={value => `$${value}`} />
       </div>
-      <button>Amenities &#9660;</button>
-      <button>Privacy &#9660;</button>
-      <Switch />
-      <button>Stuff</button>
+      <div id='switch-wrapper' className='funwrap' style={{display: 'none'}}>
+        <Switch onChange={switchChange}/>
+        <div id="popUp" style={{display: 'none'}}>{maxPrice === 0 ? 'Public only' : 'All'}</div>
+      </div>
     </div>
   );
 }

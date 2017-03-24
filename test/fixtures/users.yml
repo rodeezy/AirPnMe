@@ -8,8 +8,8 @@
 #  email           :string           not null
 #  password_digest :string           not null
 #  session_token   :string           not null
-#  created_at      :datetime         not null
-#  updated_at      :datetime         not null
+#  created_at      :date         not null
+#  updated_at      :date         not null
 #
 
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html

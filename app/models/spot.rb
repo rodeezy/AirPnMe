@@ -9,8 +9,8 @@
 #  price       :integer          not null
 #  image_url   :string           not null
 #  description :string           not null
-#  created_at  :datetime         not null
-#  updated_at  :datetime         not null
+#  created_at  :date         not null
+#  updated_at  :date         not null
 #
 
 class Spot < ApplicationRecord

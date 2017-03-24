@@ -8,9 +8,9 @@ AirPnMe is a platform to connect you to available restrooms in your area. It is 
 
 ### Restrooms as Spots
 
-On the backend, spots are stored in the database with columns for id, owner_id, location, latitude, longitude, price, image_url, about_this, guest_limit, and desks.
+On the backend, spots are stored in the database with columns for id, owner_id, latitude, longitude, price, image_url, and description.
 
-Spots are rendered at / in the Spot component. Here they show their image, and location and are a link to the SpotDetails component.
+Spots are rendered at / in the Spot component. Here they show their image, price, description, privacy, and average rating, all as a link to the SpotDetails component.
 
 In the SpotDetails component, spots are rendered listing all information about the spot, including reviews.
 
@@ -18,7 +18,7 @@ Spots are also rendered at /search which makes an API call to fetch spots filter
 
 ### Spot Search with Google Maps
 
-There are two active search bars, one at / and another at /search that allow for location, date entry as well as number of guests. When the search form is submitted on the home page, users are redirected to the search page where their filtered results are available.
+There are two active search bars, one at / and another at /search that allow for location. When the search form is submitted on the home page, users are redirected to the search page where their filtered results are available.
 
 At /search, a google map is rendered with markers for each spot whose coordinates lie within the bounds of the map. The map actively filters the rendered spots as the map is moved or zoomed.
 

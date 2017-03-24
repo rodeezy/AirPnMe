@@ -118,4 +118,7 @@ uright = -122.402027
     : Faker::Hacker.adjective + " " + Faker::Address.street_name + " " + "bathroom"),
     image_url: $urls[i],
     lat: rand(region[0]..region[1]), lng: rand(region[2]..region[3]), price: rand(1..100)})
+  rand(3..6).times do
+    Review.create(author_id: rand(User.all.length), spot_id: i + 1, rating: rand(0..5), body: Faker::Lorem.paragraph)
+  end
 end

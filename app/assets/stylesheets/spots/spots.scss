@@ -18,20 +18,23 @@
   flex-basis: 0;
 }
 
-SpotMap {
-  position: fixed;
-}
-
-// .img-container {
-//   width: 100%;
-//   padding-top: 75%;
+// SpotMap {
+//   position: fixed;
 // }
 
-.spot-index-item img {
-  width: 100%;
-  height: 200px;
+.img-container {
+
+}
+
+.img-container img {
+
+  width: 20vw;
+  height: 20vw;
+  object-fit: cover;
+
+  // height: 200px;
   // padding-top: 75%;
-  //object-fit: cover;
+  // object-fit: cover;
 
   // position: relative;
   // float: left;

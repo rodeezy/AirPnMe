@@ -109,20 +109,20 @@ a {
 /*### MAP ###*/
 
 .map {
-  position: fixed;
-  height: 600px;
-  width: 550px;
+  // position: fixed;
+  height: 50vw;
+  width: 50vw;
 }
 
 .right-half {
   float: right;
 }
 
-@media (max-width: 40em) {
-.map {
-display: none;
-}
-}
+// @media (max-width: 40em) {
+// .map {
+// display: none;
+// }
+// }
 
 @import '_datepicker.css';
 @import 'session.scss';

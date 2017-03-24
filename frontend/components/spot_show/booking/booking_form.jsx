@@ -5,6 +5,7 @@ import { DateRangePicker } from 'react-dates';
 class BookingForm extends React.Component {
   constructor(props) {
     super(props);
+    console.log(this.props.spotId);
     this.state = { author_id: this.props.currentUser.id, start_time: new Date(Date.now()), end_time: new Date(Date.now()+1e3*3600*24) };
 
     this.handleSubmit = this.handleSubmit.bind(this);

@@ -1,10 +1,11 @@
 import React from 'react';
 
-const Review = ({ rating, body }) => (
+const Review = ({ author, rating, body }) => (
   <div>
     <ul>
       <li>Rating: { rating }</li>
       <li>{ body }</li>
+      <li>by {author}</li>
     </ul>
   </div>
 );

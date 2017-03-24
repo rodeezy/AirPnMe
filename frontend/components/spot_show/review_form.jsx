@@ -36,7 +36,8 @@ class ReviewForm extends React.Component {
           <br/>
           <input type="number"
             value={ this.state.rating }
-            onChange={ this.update("rating") }/>
+            onChange={ this.update("rating") }
+            min='0' max='5'/>
           <br/>
 
           <label>Comment</label>

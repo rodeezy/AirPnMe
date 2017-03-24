@@ -31,8 +31,8 @@ class IndexItem extends React.Component {
            </div>
 
         <div className="index-item-info">
+          <span className='index-item-price'>{(this.props.spot.price ? `$${this.props.spot.price}` : "Free")}  </span>
           <span className="index-item-description">
-            <span className='index-item-price'>{(this.props.spot.price ? `$${this.props.spot.price}` : "Free")}  </span>
             {description}
           </span>
           <br />

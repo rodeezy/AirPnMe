@@ -17,7 +17,8 @@ class Greeting extends React.Component {
   personalGreeting(currentUser, logout) {
     return(
       <nav className="login-signup">
-        <h2 className="header-name">{currentUser.fname}!</h2>
+        <h4 className="header-name">Hi, {currentUser.fname}!</h4>
+        <Link to='/user/bookings'>My Bookings</Link>
         <Link className="login-signup-btn" onClick={logout}>Log Out</Link>
       </nav>
     );

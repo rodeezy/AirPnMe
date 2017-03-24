@@ -16,7 +16,7 @@ class ReviewButton extends React.Component{
   render() {
     return (
       <button
-        className="review-button"
+        className="guest-login"
         onClick={this.handleClick}>
         Leave a Review
       </button>

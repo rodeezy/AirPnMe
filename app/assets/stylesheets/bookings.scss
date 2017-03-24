@@ -12,6 +12,28 @@
   display: inherit;
 }
 
+.booking-index-item .spot-index-item {
+  width: 10%;
+  height: 10%;
+}
+
+.booking-index-item .index-item-info
+.index-item-price,
+.index-item-privacy,
+.index-item-rating {
+  display: none;
+}
+
+.booking-index-item-info {
+  margin-top: -25px;
+  margin-bottom: 25px;
+}
+
+.booking-index-item img {
+  width: 100%;
+  height: 100%;
+}
+
 #booking-submit {
   left: 10%;
   position: relative;

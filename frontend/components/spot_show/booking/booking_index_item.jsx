@@ -15,18 +15,19 @@ class BookingIndexItem extends React.Component {
 
   render() {
     const { start_time, end_time, spot } = this.props.booking;
-
+    console.log(end_time);
+    window.end_time = end_time;
     return (
       <div className="booking-index-item"
            onClick={this.handleClick}>
         <SpotIndexItem spot={spot} />
         <div className="booking-index-item-info">
           <span className="index-item-start-time">
-            {start_time}
+            {new Date(start_time).toDateString()}
           </span>
-          <br />
+           -> 
           <span className="index-item-end-time">
-            {end_time}
+            {new Date(end_time).toDateString()}
           </span>
           <br />
         </div>

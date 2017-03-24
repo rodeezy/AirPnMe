@@ -14,23 +14,26 @@ const SpotShow = ({ spot, spotId, fetchSpot, children }) => {
 
   return(
     <div className="single-spot-show">
-      <div className="single-spot-map">
         <img src={spot.image_url} />
+        <div className="single-spot-map">
+          <SpotMap
+            spots={spots}
+            spotId={spotId}
+            singleSpot={true}
+            fetchSpot={fetchSpot}
+            />
+      </div>
+            <div className="right-half-spot-details">
+              <BookingFormContainer spotId={spotId} />
+            </div>
+            <br />
         <div className="left-half-spot-details">
           <SpotDetail spot={spot} />
           {children || <ReviewButton spotId={spotId} />}
         </div>
-        <div className="right-half-spot-details">
-          <BookingFormContainer spotId={spotId} />
-        </div>
-        <br />
-        <SpotMap
-          spots={spots}
-          spotId={spotId}
-          singleSpot={true}
-          fetchSpot={fetchSpot}
-          />
-      </div>
+
+
+
     </div>
   );
 };

@@ -3,6 +3,7 @@ import { CREATE_REVIEW,
   RECEIVE_BOOKING,
   RECEIVE_SPOTS,
   RECEIVE_SPOT } from '../actions/spot_actions';
+
 import merge from 'lodash/merge';
 
 const SpotsReducer = (state = {}, action) => {

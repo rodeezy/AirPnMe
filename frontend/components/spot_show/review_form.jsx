@@ -43,14 +43,16 @@ class ReviewForm extends React.Component {
           <label>Comment</label>
           <br/>
           <textarea
-            cols='30'
+            cols='40'
             rows='10'
             value={ this.state.body }
             onChange={ this.update("body") }></textarea>
           <br/>
-          <input type="submit"/>
+          <input className='guest-login' style={{'marginRight': '40px'}} type="submit"/>
+          <button className='lower-login-btn'
+            style={{'float': 'none', 'height': '30px', 'width': '100px'}}
+             onClick={ this.navigateToSpotShow }>Cancel</button>
         </form>
-        <button onClick={ this.navigateToSpotShow }>Cancel</button>
       </div>
     );
  }

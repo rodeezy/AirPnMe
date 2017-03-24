@@ -1,7 +1,8 @@
 import {
   RECEIVE_CURRENT_USER,
   LOGOUT,
-  RECEIVE_ERRORS } from '../actions/session_actions';
+  RECEIVE_ERRORS,
+  CLEAR_ERRORS } from '../actions/session_actions';
 import {RECEIVE_BOOKING} from '../actions/spot_actions';
 import merge from 'lodash/merge';
 
@@ -11,7 +12,8 @@ const _nullUser = Object.freeze({
 });
 
 const SessionReducer = (state = _nullUser, action) => {
-  Object.freeze(state)
+  Object.freeze(state);
+  let newState = merge({}, state);
   switch(action.type) {
     case RECEIVE_CURRENT_USER:
       const currentUser = action.currentUser;
@@ -26,9 +28,12 @@ const SessionReducer = (state = _nullUser, action) => {
         errors
       });
     case RECEIVE_BOOKING:
-      let newState = merge({}, state);
+      ;
       const booking = action.booking;
       newState.currentUser.bookings.push(booking);
+      return newState;
+    case CLEAR_ERRORS:
+      newState[errors] = [];
       return newState;
     default:
       return state;

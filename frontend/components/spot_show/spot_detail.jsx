@@ -12,8 +12,8 @@ const SpotDetail = ({ spot }) => {
   return (
     <div>
       <ul className="spot-list">
+        <li><h3>{spot.description}</h3></li>
         <li>Rating: {spot.average_rating || "No reviews yet"}</li>
-        <li>{spot.description}</li>
       </ul>
       <br/>
       <div className="reviews">

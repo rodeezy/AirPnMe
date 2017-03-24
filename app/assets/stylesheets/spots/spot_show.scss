@@ -1,5 +1,16 @@
-.single-spot-map img {
+.single-spot-show img {
   width: 100%;
   height: 492px;
   object-fit: cover;
+}
+
+.single-spot-map {
+  display: inline-block;
+  width: 60vw;
+  height: 30vw;
+}
+
+.single-spot-map .map {
+  width: 100%;
+  height: 100%;
 }

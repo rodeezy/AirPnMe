@@ -1,6 +1,6 @@
 # AirPnMe
 
-[heroku link]: https://airpnme.herokuapp.com/#
+[heroku link](https://airpnme.herokuapp.com/#)
 
 AirPnMe is a platform to connect you to available restrooms in your area. It is a web application, inspired by AirBnB, and built using Ruby on Rails on the backend, a PostgresSQL database, and React/Redux framework on the frontend.
 

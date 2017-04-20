@@ -7,7 +7,9 @@ import ReviewButton from './review_button';
 import BookingForm from './booking/booking_form'
 import BookingFormContainer from './booking/booking_form_container'
 
+
 const SpotShow = ({ spot, spotId, fetchSpot, children }) => {
+
   const spots = {
     [spotId]: spot
   };

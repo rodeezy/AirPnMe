@@ -5,8 +5,8 @@ import { DateRangePicker } from 'react-dates';
 class BookingForm extends React.Component {
   constructor(props) {
     super(props);
-    console.log(this.props.spotId);
-    this.state = { author_id: this.props.currentUser.id, start_time: new Date(Date.now()), end_time: new Date(Date.now()+1e3*3600*24) };
+    // let userId = this.props.currentUser? this.props.currentUser.id : 1;
+    this.state = { start_time: new Date(Date.now()), end_time: new Date(Date.now()+1e3*3600*24) };
 
     this.handleSubmit = this.handleSubmit.bind(this);
     this.navigateToSpotShow = this.navigateToSpotShow.bind(this);
@@ -19,12 +19,17 @@ class BookingForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    const spotId = parseInt(this.props.params.spotId);
-    const booking = Object.assign({}, this.state, {
-      spot_id: spotId
-    });
-    this.props.createBooking({booking});
-    this.navigateToSpotShow();
+    if (this.props.currentUser){
+      const spotId = parseInt(this.props.params.spotId);
+      const booking = Object.assign({}, this.state, {
+        author_id: this.props.currentUser.id, spot_id: spotId
+      });
+      this.props.createBooking({booking});
+      this.navigateToSpotShow();
+    }
+    else{
+      $('.bookingForm').append("<p>Please sign in or make an account</p>")
+    }
   }
 
   update(property) {

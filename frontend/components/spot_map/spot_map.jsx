@@ -10,7 +10,8 @@ const _getCoordsObj = latLng => ({
 
 let _mapOptions = {
   center: {lat: 37.773972, lng: -122.431297}, // San Francisco coords
-  zoom: 13
+  zoom: 13,
+  scrollwheel: false
 };
 /*Bounds that show all: _.ld
 b: cd

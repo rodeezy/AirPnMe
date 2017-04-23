@@ -1,4 +1,5 @@
 import React from 'react';
+import StarRating from 'react-star-rating';
 import { withRouter } from 'react-router';
 
 class IndexItem extends React.Component {

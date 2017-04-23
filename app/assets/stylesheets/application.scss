@@ -108,7 +108,7 @@ a {
 /*### MAP ###*/
 
 .map {
-  // position: fixed;
+  position: fixed;
   height: 50vw;
   width: 50vw;
 }
@@ -131,3 +131,4 @@ a {
 @import "rc-switch.scss";
 @import "filters.scss";
 @import "bookings.scss";
+// @import "reviews/react-star-rating.scss"

@@ -3,6 +3,11 @@
 // }
 .filter-form {
   border-top: 2px solid #ededed;
+    width: 42vw;
+    position: fixed;
+    z-index: 10;
+    background: white;
+    padding-bottom: 20px;
 }
 
 .filter-form button {

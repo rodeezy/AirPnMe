@@ -89,7 +89,7 @@ class SessionForm extends React.Component {
 		// const login = this.props.login;
 		const inputType = this.state.modalType === "Log in" ? "hidden" : "text";
 		return (
-			<div id='top' className="form-div">
+			<div className='top' id="form-div">
 				<nav className="login-signup">
 					<Link onClick={() => this.props.login({user: { email: 'guest@guest.com', password: 'password' }})}
 						className="login-signup-btn">Demo</Link>

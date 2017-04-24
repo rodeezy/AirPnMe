@@ -5,7 +5,7 @@ import GreetingContainer from './greeting/greeting_container';
 const App = ({ children }) => (
   <div>
     <header>
-      <div id='top'>
+      <div className='top'>
         <div id='left-header'>
           <Link to="/">
             <img src="https://s-media-cache-ak0.pinimg.com/originals/45/56/26/45562695c73bc210d01d31a083b9f81c.jpg"
@@ -15,12 +15,12 @@ const App = ({ children }) => (
         </div>
         <GreetingContainer />
       </div>
-      <h1 className="Header">Gotta go? <span className="inner-header">
-        Find a bathroom near you</span></h1>
-      <h1 className="line-two">on AirPnMe.</h1>
     </header>
     {children}
   </div>
 );
 
 export default App;
+// <h1 className="Header">Gotta go? <span className="inner-header">
+//   Find a bathroom near you</span></h1>
+// <h1 className="line-two">on AirPnMe.</h1>

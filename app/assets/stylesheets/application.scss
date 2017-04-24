@@ -96,21 +96,31 @@ a {
   justify-content: space-between;
 }
 
- #top {
-   display: flex;
-   flex-direction: row;
-   justify-content: space-between;
-   align-items: center;
-   width: 100%;
-   background: white;
+ .top {
+  padding-top: 10px;
+  top: 0;
+  z-index: 10;
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  background: white;
  }
 
 /*### MAP ###*/
 
 .map {
-  position: fixed;
-  height: 50vw;
-  width: 50vw;
+  position: fixed !important;
+  height: 91%;
+  width: 80%;
+  border-top: 2px solid #ededed;
+  z-index: 11;
+  top: 62px;
+}
+.left-half {
+  margin-top: 55px;
 }
 
 .right-half {

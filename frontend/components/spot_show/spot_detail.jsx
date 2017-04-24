@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router';
 import ReviewShow from './review_show.jsx';
+import ReactStars from 'react-stars';
 
 const reviewList = (reviews = []) => (
   reviews.map(review => (
@@ -9,11 +10,12 @@ const reviewList = (reviews = []) => (
 );
 
 const SpotDetail = ({ spot }) => {
+  const starRating = <ReactStars value={spot.average_rating} edit={false} />;
   return (
     <div>
       <ul className="spot-list">
         <li><h3>{spot.description}</h3></li>
-        <li>Rating: {spot.average_rating || "No reviews yet"}</li>
+        <li>Rating: {spot.average_rating? starRating : "No reviews yet"}</li>
       </ul>
       <br/>
       <div className="reviews">

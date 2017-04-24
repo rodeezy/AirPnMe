@@ -79,7 +79,6 @@ class SpotMap extends Component {
         }
       });
       map.fitBounds(bounds);
-      $("#pac-input").appendTo(".filter-form");
     });
 
 

@@ -1,4 +1,6 @@
 import React from 'react';
+// import StarRating from 'react-star-rating';
+import ReactStars from 'react-stars';
 import { withRouter } from 'react-router';
 
 class ReviewForm extends React.Component {
@@ -28,16 +30,18 @@ class ReviewForm extends React.Component {
     return e => this.setState({ [property]: e.currentTarget.value });
   }
 
+  updateRating() {
+    return new_rating => this.setState({rating: new_rating})
+  }
+
   render() {
     return (
       <div className="review-form">
         <form onSubmit={ this.handleSubmit }>
           <label>Rating</label>
           <br/>
-          <input type="number"
-            value={ this.state.rating }
-            onChange={ this.update("rating") }
-            min='0' max='5'/>
+          <ReactStars value={ this.state.rating }
+          onChange={ this.updateRating() } count={5} size={24} color2={'#ffd700'} />
           <br/>
 
           <label>Comment</label>

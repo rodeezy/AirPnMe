@@ -1,9 +1,12 @@
 import React from 'react';
+import ReactStars from 'react-stars';
 
 const Review = ({ author, rating, body }) => (
   <div>
     <ul>
-      <li>Rating: { rating }</li>
+      <li>Rating:
+        <ReactStars value={rating} edit={false} />
+        </li>
       <li>{ body }</li>
       <li>by {author}</li>
     </ul>

@@ -1,5 +1,5 @@
 import React from 'react';
-import StarRating from 'react-star-rating';
+import ReactStars from 'react-stars';
 import { withRouter } from 'react-router';
 
 class IndexItem extends React.Component {
@@ -23,7 +23,7 @@ class IndexItem extends React.Component {
   render() {
     //debugger;
     const { average_rating, description, image_url } = this.props.spot;
-
+    const starRating = <ReactStars value={average_rating} edit={false} />;
     return (
       <div className="spot-index-item"
            onClick={this.handleClick}>
@@ -42,7 +42,7 @@ class IndexItem extends React.Component {
           </span>
           <br />
           <span className="index-item-rating">
-            {average_rating || "No reviews yet"}
+            {average_rating? starRating : "No reviews yet"}
           </span>
         </div>
       </div>

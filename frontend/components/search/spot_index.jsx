@@ -2,16 +2,16 @@ import React from 'react';
 import SpotIndexItem from './spot_index_item';
 
 const SpotIndex = ({ spots }) => {
-  let i = 0;
-
-  const componentDidMount = () => {
-    i = 0;
-  }
-
-  const next = () => {
-    console.log(i);
-    i++;
-  }
+  // let i = 0;
+  //
+  // const componentDidMount = () => {
+  //   i = 0;
+  // }
+  //
+  // const next = () => {
+  //   console.log(i);
+  //   i++;
+  // }
   return (
     <div className="spot-results-container">
       <div className='spot-results'>
@@ -26,11 +26,12 @@ const SpotIndex = ({ spots }) => {
           ))}
         </div>
       </div>
-      <br />
-      <button>Previous</button>
-      <button onClick={next}>Next</button>
     </div>
   );
 }
 
 export default SpotIndex;
+
+// <br />
+// <button onClick={previous}>Previous</button>
+// <button onClick={next}>Next</button>

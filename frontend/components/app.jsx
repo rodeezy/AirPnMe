@@ -12,6 +12,7 @@ const App = ({ children }) => (
               height='50' width='50' className="logo"/>
           </Link>
           <input id="pac-input" className="controls" type="text" placeholder="Anywhere" />
+          <input id="available-times" className="controls" type="text" placeholder="Anytime" />
         </div>
         <GreetingContainer />
       </div>

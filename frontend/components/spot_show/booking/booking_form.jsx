@@ -37,8 +37,13 @@ class BookingForm extends React.Component {
   }
 
   render() {
+    // window.params = this.props.params;
+    // window.props = this.props;
     return (
       <div className="booking-form">
+        <div className="price-header">
+          ${this.props.price} per day
+        </div>
         <form onSubmit={ this.handleSubmit }>
 
           <label>Start Date</label>

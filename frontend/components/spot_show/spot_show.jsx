@@ -13,7 +13,7 @@ const SpotShow = ({ spot, spotId, fetchSpot, children }) => {
   const spots = {
     [spotId]: spot
   };
-
+  // window.spot = spot;
   return(
     <div className="single-spot-show">
         <img src={spot.image_url} />
@@ -26,7 +26,7 @@ const SpotShow = ({ spot, spotId, fetchSpot, children }) => {
             />
       </div>
             <div className="right-half-spot-details">
-              <BookingFormContainer spotId={spotId} />
+              <BookingFormContainer spotId={spotId} price={spot.price} />
             </div>
             <br />
         <div className="left-half-spot-details">

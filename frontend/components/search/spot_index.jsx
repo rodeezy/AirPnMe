@@ -6,32 +6,30 @@ class SpotIndex extends React.Component {
   constructor(props){
     super(props);
     console.log("HEEEEYYYYYY");
-    console.log(this.props);
+    console.log(this);
     this.state = {
-      displaySpots: this.props.spots.slice(0, 18)
+      displaySpots: this.props.spots.slice(0,18),
+      page: 0
     };
-    this.page = 0;
     this.next = this.next.bind(this);
+    this.previous = this.previous.bind(this);
   }
 
-  // componentDidMount() {
-  //   // page = 0;
-  //   console.log('ayy');
+  // componentWillMount(nextProps) {
+  //   this.setState({displaySpots: nextProps.spots.slice(0,18)});
   // }
 
   next() {
     // console.log(i);
     // receiveSpots(spots.slice(18,36));
     // console.log(page);
-    this.page++;
-    this.setState({displaySpots: this.props.spots.slice(this.page*18,
-      (this.page+1)*18)});
+    this.setState({page: this.state.page + 1, displaySpots: this.props.spots.slice(this.state.page*18,
+      (this.state.page+1)*18)});
   }
 
   previous() {
-      if (this.page > 0) {
-        this.page--;
-      }
+    this.setState({page: this.state.page - 1, displaySpots: this.props.spots.slice(this.state.page*18,
+      (this.state.page+1)*18)});
   }
 
   render() {

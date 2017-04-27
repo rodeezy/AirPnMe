@@ -1,5 +1,6 @@
 import React from 'react';
 import SpotIndexItem from './spot_index_item';
+// import { receiveSpots } from '../../actions/spot_actions';
 
 const SpotIndex = ({ spots }) => {
   let page = 0;
@@ -11,7 +12,7 @@ const SpotIndex = ({ spots }) => {
 
   const next = () => {
     // console.log(i);
-
+    // receiveSpots(spots.slice(18,36));
     console.log(page);
     page++;
     SpotIndex({spots});

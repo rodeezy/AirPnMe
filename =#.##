@@ -1,0 +1,7 @@
+AirPnMe@1.0.0 /Users/ryanodening/AirPnMe
+├── bootstrap-slider@9.7.2  extraneous
+├─┬ react@15.5.4 
+│ └── fbjs@0.8.12 
+├── react-addons-shallow-compare@15.5.2 
+└── react-dom@15.5.4 
+

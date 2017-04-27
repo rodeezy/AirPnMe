@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router';
 import GreetingContainer from './greeting/greeting_container';
+// import { DateRangePicker, SingleDatePicker, DayPickerRangeController } from 'react-dates';
+// import 'react-dates/lib/css/_datepicker.scss';
 
 const App = ({ children }) => (
   <div>

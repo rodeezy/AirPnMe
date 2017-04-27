@@ -62,7 +62,8 @@ a {
 }
 
  html {
-   font-family: sans-serif;
+   font-family: Circular;
+   text-transform: capitalize;
  }
 
  img {
@@ -141,3 +142,4 @@ a {
 @import "rc-switch.scss";
 @import "filters.scss";
 @import "bookings.scss";
+// @import 'react-dates/lib/css/_datepicker.scss';

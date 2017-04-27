@@ -5,8 +5,6 @@ import SpotIndexItem from './spot_index_item';
 class SpotIndex extends React.Component {
   constructor(props){
     super(props);
-    console.log("HEEEEYYYYYY");
-    console.log(this.props);
     this.state = {
       displaySpots: this.props.spots.slice(0, 18)
     };
@@ -29,32 +27,30 @@ class SpotIndex extends React.Component {
   }
 
   previous() {
-      if (this.page > 0) {
-        this.page--;
+      if (page > 0) {
+        page--;
       }
   }
 
-  render() {
-    return (
-      <div className="spot-results-container">
-        <div className='spot-results'>
-          <div className='left-half-results'>
-            {this.state.displaySpots.slice(0, 9).map(spot => (
-              <SpotIndexItem spot={spot} key={spot.id} />
-            ))}
-          </div>
-          <div className='right-half-results'>
-            {this.state.displaySpots.slice(9,18).map(spot => (
-              <SpotIndexItem spot={spot} key={spot.id} />
-            ))}
-          </div>
+  return (
+    <div className="spot-results-container">
+      <div className='spot-results'>
+        <div className='left-half-results'>
+          {this.state.displaySpots.slice(0, 9).map(spot => (
+            <SpotIndexItem spot={spot} key={spot.id} />
+          ))}
         </div>
-        <br />
-        <button onClick={this.previous}>Previous</button>
-        <button onClick={this.next}>Next</button>
+        <div className='right-half-results'>
+          {this.state.displaySpots.slice(9,18).map(spot => (
+            <SpotIndexItem spot={spot} key={spot.id} />
+          ))}
+        </div>
       </div>
-    );
-  }
+      <br />
+      <button onClick={previous}>Previous</button>
+      <button onClick={this.next}>Next</button>
+    </div>
+  );
 }
 
 export default SpotIndex;

@@ -4,9 +4,9 @@ import SpotIndexItem from './spot_index_item';
 const SpotIndex = ({ spots }) => {
   // let i = 0;
   //
-  // const componentDidMount = () => {
-  //   i = 0;
-  // }
+  const componentDidMount = () => {
+    console.log('shalom');
+  }
   //
   // const next = () => {
   //   console.log(i);

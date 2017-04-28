@@ -25,6 +25,7 @@ f: jd
 class SpotMap extends Component {
 
   componentDidMount() {
+
     let initMap = this.refs.map;
     this.map = new google.maps.Map(initMap, _mapOptions);
     const map = this.map;

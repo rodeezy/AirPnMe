@@ -38,7 +38,6 @@ class IndexItem extends React.Component {
   }
 
   unSelectIcon(){
-    // console.log(this.props);
     this.props.spot.marker.setIcon(redIcon);
   }
 

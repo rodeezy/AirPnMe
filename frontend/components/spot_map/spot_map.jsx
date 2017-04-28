@@ -98,6 +98,14 @@ class SpotMap extends Component {
     } else {
       this.MarkerManager.updateMarkers(this.props.spots);
     }
+    this.MarkerManager.markers.forEach(marker => {
+      this.props.spots.forEach(spot => {
+        if (spot.id == marker.spotId){
+          spot.marker = marker;
+        }
+      })
+    })
+    //bad time i know
   }
 
   _registerListeners() {

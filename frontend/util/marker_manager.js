@@ -28,7 +28,7 @@ export default class MarkerManager {
 
   _spotsToAdd() {
     const currentSpots = this.markers.map( marker => marker.spotId );
-    window.markers = this.markers;
+    // window.markers = this.markers;
     return this.spots.filter( spot => !currentSpots.includes(spot.id) );
   }
 
@@ -44,7 +44,8 @@ export default class MarkerManager {
     const marker = new google.maps.Marker({
       position: pos,
       map: this.map,
-      spotId: spot.id
+      spotId: spot.id,
+      spot: spot
     });
     spot.marker = marker;
     marker.addListener('click', () => this.handleClick(spot));

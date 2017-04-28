@@ -51,6 +51,7 @@ class IndexItem extends React.Component {
     //debugger;
     const { average_rating, description, image_url } = this.props.spot;
     const starRating = <ReactStars value={average_rating} edit={false} />;
+    // const priv = <img src='https://i.imgur.com/pfYggxk.png' />;
     return (
       <div className="spot-index-item" id={this.props.key}
            onClick={this.handleClick} onMouseOver={this.selectIcon}

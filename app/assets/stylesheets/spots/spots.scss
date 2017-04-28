@@ -61,12 +61,19 @@
 }
 
 .spot-index-item .index-item-description {
+  width: 180px;
+  font-weight: 700;
   color: #484848;
-  text-overflow: ellipsis;
-  // max-height: 1.8em;
-  // line-height: 1.8em;
-  overflow: hidden;
-  max-width: 180px;
-  white-space: nowrap;
+  font-family: Circular;
+  margin: 0px;
+  word-wrap: break-word;
+  font-size: 15px;
+  line-height: 18px;
+  letter-spacing: 0.2px;
+  padding-top: 0px;
+  padding-bottom: 0px;
   display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }

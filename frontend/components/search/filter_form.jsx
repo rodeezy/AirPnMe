@@ -32,8 +32,20 @@ const FilterForm = ({ minPrice, maxPrice, updateFilter }) => {
   return (
     <div className='filter-form'>
       <br/>
-      <button onClick={toggleShow('#range-wrapper')}>Price range &#9660;</button>
-      <button id='privacy-btn' onClick={toggleShow('#switch-wrapper')}>Privacy &#9660;</button>
+      <button onClick={toggleShow('#range-wrapper')}>Price range
+        <div className="iconWrapper">
+          <svg className="svg" viewBox="0 0 18 18" aria-hidden="true" focusable="false">
+            <path className="path"></path>
+          </svg>
+        </div>
+      </button>
+      <button id='privacy-btn' onClick={toggleShow('#switch-wrapper')}>Privacy
+        <div className="iconWrapper">
+          <svg className="svg" viewBox="0 0 18 18" aria-hidden="true" focusable="false">
+            <path className="path"></path>
+          </svg>
+        </div>
+      </button>
       <div id='range-wrapper' className='funwrap' style={wrapperStyle}>
         <Range onChange={handleChanges}
           min={0} max={100} defaultValue={[0, 100]} tipFormatter={value => `$${value}`} />

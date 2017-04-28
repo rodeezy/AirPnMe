@@ -25,6 +25,7 @@ f: jd
 class SpotMap extends Component {
 
   componentDidMount() {
+
     let initMap = this.refs.map;
     this.map = new google.maps.Map(initMap, _mapOptions);
     const map = this.map;
@@ -97,6 +98,14 @@ class SpotMap extends Component {
     } else {
       this.MarkerManager.updateMarkers(this.props.spots);
     }
+    this.MarkerManager.markers.forEach(marker => {
+      this.props.spots.forEach(spot => {
+        if (spot.id == marker.spotId){
+          spot.marker = marker;
+        }
+      })
+    })
+    //bad time i know
   }
 
   _registerListeners() {

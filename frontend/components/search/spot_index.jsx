@@ -5,7 +5,11 @@ const SpotIndex = ({ spots }) => {
   // let i = 0;
   //
   // const componentDidMount = () => {
-  //   i = 0;
+  //   console.log('shalom');
+  // }
+  //
+  // const componentDidUpdate = () => {
+  //   console.log('updated');
   // }
   //
   // const next = () => {

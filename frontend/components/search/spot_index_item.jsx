@@ -2,16 +2,43 @@ import React from 'react';
 import ReactStars from 'react-stars';
 import { withRouter } from 'react-router';
 
+const greenIcon = new google.maps.MarkerImage(
+  "https://mts.googleapis.com/vt/icon/name=icons/spotlight/spotlight-waypoint-a.png",
+  null,
+  null,
+  null,
+  new google.maps.Size(22, 40)
+);
+
+const redIcon = new google.maps.MarkerImage(
+  "https://maps.gstatic.com/mapfiles/api-3/images/spotlight-poi_hdpi.png",
+  null,
+  null,
+  null,
+  new google.maps.Size(22, 40)
+);
+
 class IndexItem extends React.Component {
   constructor(props) {
     super(props);
     this.handleClick = this.handleClick.bind(this);
+    this.selectIcon = this.selectIcon.bind(this);
+    this.unSelectIcon = this.unSelectIcon.bind(this);
     // this.imageStyle = this.imageStyle.bind(this);
   }
+
 
   handleClick() {
     const spotId = this.props.spot.id;
     this.props.router.push(`spots/${spotId}`);
+  }
+
+  selectIcon(){
+    this.props.spot.marker.setIcon(greenIcon);
+  }
+
+  unSelectIcon(){
+    this.props.spot.marker.setIcon(redIcon);
   }
 
   // imageStyle(imgUrl) {
@@ -25,8 +52,9 @@ class IndexItem extends React.Component {
     const { average_rating, description, image_url } = this.props.spot;
     const starRating = <ReactStars value={average_rating} edit={false} />;
     return (
-      <div className="spot-index-item"
-           onClick={this.handleClick}>
+      <div className="spot-index-item" id={this.props.key}
+           onClick={this.handleClick} onMouseOver={this.selectIcon}
+            onMouseOut={this.unSelectIcon}>
            <div className='img-container'>
              <img src={image_url} />
            </div>

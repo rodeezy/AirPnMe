@@ -4,7 +4,7 @@ import FilterForm from './filter_form';
 import SpotIndex from './spot_index';
 import SpotMap from './../spot_map/spot_map';
 
-const Search = ({ spots, minPrice, maxPrice, updateFilter }) => (
+const Search = ({ spots, minPrice, maxPrice, updateFilter, amenities, pageNumber }) => (
   <div className="user-pane">
     <div className="left-half">
       <FilterForm

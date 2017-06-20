@@ -5,8 +5,6 @@ import SpotIndexItem from './spot_index_item';
 class SpotIndex extends React.Component {
   constructor(props){
     super(props);
-    console.log("HEEEEYYYYYY");
-    console.log(this);
     this.state = {
       displaySpots: this.props.spots.slice(0,18),
       page: 0
@@ -18,6 +16,8 @@ class SpotIndex extends React.Component {
   // componentWillMount(nextProps) {
   //   this.setState({displaySpots: nextProps.spots.slice(0,18)});
   // }
+
+  //next and previous need to be redux'd (turned into actions and such)
 
   next() {
     // console.log(i);

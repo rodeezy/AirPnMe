@@ -9,7 +9,8 @@ const mapStateToProps = state => ({
   spots: asArray(state),
   minPrice: state.filters.minPrice,
   maxPrice: state.filters.maxPrice,
-  amenities: state.filters.amenities
+  amenities: state.filters.amenities,
+  pageNumber: state.filters.pageNumber
 });
 
 const mapDispatchToProps = dispatch => ({
